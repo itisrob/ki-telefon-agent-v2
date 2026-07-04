@@ -1,0 +1,191 @@
+/* KI Telefon-Agent — Interaktionen & Animationen */
+(function () {
+  'use strict';
+
+  /* ---------- Nav: Blur + Schatten beim Scrollen ---------- */
+  var nav = document.querySelector('.nav');
+  function onScrollNav() {
+    if (!nav) return;
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }
+  window.addEventListener('scroll', onScrollNav, { passive: true });
+  onScrollNav();
+
+  /* ---------- Mobile-Menü ---------- */
+  var burger = document.querySelector('.burger');
+  var mobileMenu = document.querySelector('.mobile-menu');
+  if (burger && mobileMenu) {
+    burger.addEventListener('click', function () {
+      burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  /* ---------- Rotierende Hero-Headline ---------- */
+  var rotator = document.querySelector('.rotator');
+  if (rotator) {
+    var words = rotator.querySelectorAll('span');
+    var idx = 0;
+    /* Höhe auf die längste Variante fixieren, damit nichts überlappt/springt */
+    function sizeRotator() {
+      var max = 0;
+      words.forEach(function (w) {
+        var prev = w.style.cssText;
+        w.style.cssText = 'position:static;visibility:hidden;display:block;transition:none';
+        max = Math.max(max, w.offsetHeight);
+        w.style.cssText = prev;
+      });
+      if (max) rotator.style.minHeight = max + 'px';
+    }
+    sizeRotator();
+    window.addEventListener('resize', sizeRotator);
+    if (words.length > 1) {
+      setInterval(function () {
+        words[idx].classList.remove('on');
+        idx = (idx + 1) % words.length;
+        words[idx].classList.add('on');
+      }, 3400);
+    }
+  }
+
+  /* ---------- Scroll-Reveal (IntersectionObserver) ---------- */
+  var revealEls = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) {
+      /* Bereits sichtbare Elemente sofort zeigen (kein Blank-Flash bei Anker-Links/Reload mitten auf der Seite) */
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) {
+        el.style.transition = 'none';
+        el.classList.add('in');
+        void el.offsetWidth;
+        el.style.transition = '';
+      } else {
+        io.observe(el);
+      }
+    });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---------- Timeline-Beam (wächst mit Scroll) ---------- */
+  var beam = document.querySelector('.tl-beam');
+  var timeline = document.querySelector('.timeline');
+  if (beam && timeline) {
+    function updateBeam() {
+      var rect = timeline.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var progress = (vh * 0.6 - rect.top) / rect.height;
+      progress = Math.max(0, Math.min(1, progress));
+      beam.style.height = (progress * 100) + '%';
+    }
+    window.addEventListener('scroll', updateBeam, { passive: true });
+    updateBeam();
+  }
+
+  /* ---------- Zahlen-Counter ---------- */
+  var counters = document.querySelectorAll('[data-count]');
+  if ('IntersectionObserver' in window && counters.length) {
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        var target = parseFloat(el.getAttribute('data-count'));
+        var suffix = el.getAttribute('data-suffix') || '';
+        var decimals = (String(target).split('.')[1] || '').length;
+        var start = null;
+        function tick(ts) {
+          if (!start) start = ts;
+          var p = Math.min(1, (ts - start) / 1400);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = (target * eased).toFixed(decimals) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        cio.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (el) { cio.observe(el); });
+  }
+
+  /* ---------- Tabs (Use-Cases etc.) ---------- */
+  document.querySelectorAll('[data-tabs]').forEach(function (wrap) {
+    var btns = wrap.querySelectorAll('.tab-btn');
+    var panes = wrap.querySelectorAll('.tab-pane');
+    btns.forEach(function (btn, i) {
+      btn.addEventListener('click', function () {
+        btns.forEach(function (b) { b.classList.remove('on'); });
+        panes.forEach(function (p) { p.classList.remove('on'); });
+        btn.classList.add('on');
+        if (panes[i]) panes[i].classList.add('on');
+      });
+    });
+  });
+
+  /* ---------- Marquee: Tracks für Endlos-Loop duplizieren ---------- */
+  document.querySelectorAll('.logo-track, .lang-track').forEach(function (track) {
+    track.innerHTML += track.innerHTML;
+  });
+
+  /* ---------- FAQ: jeweils nur ein Item offen ---------- */
+  document.querySelectorAll('.faq').forEach(function (faq) {
+    faq.querySelectorAll('details').forEach(function (d) {
+      d.addEventListener('toggle', function () {
+        if (d.open) {
+          faq.querySelectorAll('details[open]').forEach(function (o) {
+            if (o !== d) o.open = false;
+          });
+        }
+      });
+    });
+  });
+
+  /* ---------- Testanruf-Formular ---------- */
+  window.submitForm = function (ev) {
+    ev.preventDefault();
+    var form = ev.target;
+    /* TODO: Endpoint anbinden (z. B. LeadConnector/Make-Webhook), sobald vom Kunden bereitgestellt. */
+    form.style.display = 'none';
+    var success = document.getElementById('formSuccess');
+    if (success) success.classList.add('on');
+    return false;
+  };
+
+  /* ---------- Cookie-Banner ---------- */
+  var banner = document.getElementById('cookieBanner');
+  if (banner) {
+    var consent = null;
+    try { consent = localStorage.getItem('kta-consent'); } catch (e) {}
+    if (!consent) banner.classList.add('on');
+    window.cookieChoice = function (accept) {
+      try { localStorage.setItem('kta-consent', accept ? 'all' : 'essential'); } catch (e) {}
+      banner.classList.remove('on');
+      if (accept) loadTracking();
+    };
+    if (consent === 'all') loadTracking();
+  }
+  function loadTracking() {
+    /* Tracking-IDs vom Kunden übernehmen (GA4, Meta-Pixel, MS Clarity) — bewusst erst nach Consent geladen. */
+  }
+
+  /* ---------- Aktiven Nav-Link markieren ---------- */
+  var path = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a[href]').forEach(function (a) {
+    if (a.getAttribute('href') === path) a.classList.add('active');
+  });
+})();

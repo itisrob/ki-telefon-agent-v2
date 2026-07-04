@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seite nicht gefunden | KI Telefon Agent</title>
+    <meta name="description" content="Die angeforderte Seite wurde nicht gefunden.">
+        <link rel="canonical" href="https://ki-telefon-agent.com/wp-content/uploads/2025/05/made-in-germany-badge.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Seite nicht gefunden | KI Telefon Agent">
+    <meta property="og:description" content="Die angeforderte Seite wurde nicht gefunden.">
+    <meta property="og:image" content="https://ki-telefon-agent.com/wp-content/uploads/2025/02/ki-telefon-agent-logo-1.png">
+    <meta property="og:url" content="https://ki-telefon-agent.com/wp-content/uploads/2025/05/made-in-germany-badge.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="KI Telefon Agent">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/wp-content/uploads/2025/02/cropped-ki-telefon-agent-logo-favicon.png" type="image/png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/assets/css/base.css?v=20260331">
+    <link rel="stylesheet" href="/assets/css/layout.css?v=20260331">
+    <link rel="stylesheet" href="/assets/css/components.css?v=20260331">
+    <link rel="stylesheet" href="/assets/css/responsive.css?v=20260331">
+
+    <!-- Page-specific CSS -->
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AI Voice Impact UG (haftungsbeschränkt)",
+        "alternateName": "KI Telefon Agent",
+        "url": "https://ki-telefon-agent.com",
+        "logo": "https://ki-telefon-agent.com/wp-content/uploads/2025/02/ki-telefon-agent-logo-1.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Hohe Bleichen 8",
+            "addressLocality": "Hamburg",
+            "postalCode": "20354",
+            "addressCountry": "DE"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+49-40-74302560",
+            "contactType": "sales",
+            "availableLanguage": ["German", "English"]
+        }
+    }
+    </script>
+    </head>
+<body class="page-404">
+
+<!-- Navigation -->
+<nav class="site-nav" id="siteNav">
+    <a href="/" class="nav-logo">
+        <img src="/wp-content/uploads/2025/02/ki-telefon-agent-logo-1.png" alt="KI Telefon Agent" width="200" height="45">
+    </a>
+
+    <div class="nav-right">
+        <a href="/onoffice-demo/" class="nav-link ">onOffice</a>
+        <a href="/custom/" class="nav-link ">Custom CRM</a>
+        <a href="/preise/" class="nav-link ">Preise</a>
+        <a href="/blog/" class="nav-link ">Blog</a>
+        <a href="/ueber-uns/" class="nav-link ">Über uns</a>
+        <a href="/termin/" class="btn btn-primary btn-nav-cta" style="color:#fff; text-decoration:none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Strategiegespräch
+        </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <div class="nav-hamburger" id="navHamburger" aria-label="Menu oeffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<!-- Mobile navigation overlay -->
+<div class="nav-mobile-overlay" id="navMobileOverlay">
+    <a href="/onoffice-demo/" class="nav-link">onOffice Integration</a>
+    <a href="/custom/" class="nav-link">Custom CRM</a>
+    <a href="/preise/" class="nav-link">Preise</a>
+    <a href="/blog/" class="nav-link">Blog</a>
+    <a href="/ueber-uns/" class="nav-link">Über uns</a>
+    <a href="/termin/" class="btn btn-primary" style="color:#fff; text-decoration:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:0.3rem;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Strategiegespräch
+    </a>
+</div>
+
+<section class="hero" style="min-height: 60vh; text-align: center;">
+    <div class="hero-inner" style="max-width: 560px; margin: 0 auto;">
+        <h1 style="font-size: 4rem; margin-bottom: 1rem;"><span class="text-gold">404</span></h1>
+        <h2 style="margin-bottom: 1rem;">Seite nicht gefunden</h2>
+        <p class="hero-subtitle">Die angeforderte Seite existiert nicht oder wurde verschoben.</p>
+        <a href="/" class="btn btn-primary">Zur Startseite</a>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <img src="/wp-content/uploads/2025/02/ki-telefon-agent-logo-1.png" alt="KI Telefon Agent" width="160" height="36">
+        </div>
+
+        <div class="footer-trust">
+            <span class="footer-trust-item">
+                <i data-lucide="shield-check"></i> DSGVO-konform
+            </span>
+            <span class="footer-trust-item">
+                <i data-lucide="database"></i> onOffice Marketplace
+            </span>
+            <span class="footer-trust-item">
+                <i data-lucide="award"></i> TÜV-zert. Datenschutz
+            </span>
+            <span class="footer-trust-item">
+                <i data-lucide="anchor"></i> Made in Hamburg
+            </span>
+        </div>
+
+        <div class="footer-links">
+            <a href="/impressum/">Impressum</a>
+            <a href="/agb/">AGB</a>
+            <a href="/avv/">AVV</a>
+            <a href="/datenschutz/">Datenschutz</a>
+            <a href="/ueber-uns/">Über uns</a>
+            <a href="/rechner/">KI-Potenzialanalyse</a>
+            <a href="/blog/">Blog</a>
+            <a href="https://ki-telefon-agent.app.clientclub.net/login" target="_blank" rel="noopener">Partner Login</a>
+        </div>
+
+        <p class="footer-copy">&copy; 2026 KI Telefon Agent. Alle Rechte vorbehalten.</p>
+        <span class="footer-cookie-link" id="cookieSettingsOpen">Cookie-Einstellungen</span>
+    </div>
+</footer>
+
+<!-- Cookie Consent Banner -->
+<div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner-inner">
+        <div class="cookie-banner-text">
+            Wir verwenden Cookies, um dir die bestmögliche Erfahrung auf unserer Website zu bieten.
+            Einige sind technisch notwendig, andere helfen uns, die Website zu verbessern.
+            <a href="/datenschutz/">Mehr erfahren</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-primary" id="cookieAcceptAll">Alle akzeptieren</button>
+            <button class="btn btn-secondary" id="cookieRejectAll">Nur notwendige</button>
+            <button class="btn btn-secondary" id="cookieShowSettings">Einstellungen</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Settings Modal -->
+<div class="modal-overlay" id="cookieSettingsModal">
+    <div class="modal-content cookie-settings">
+        <button class="modal-close" id="cookieSettingsClose" aria-label="Schließen">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+
+        <h3 style="margin-bottom: 1.5rem;">Cookie-Einstellungen</h3>
+
+        <div class="cookie-category">
+            <div class="cookie-category-info">
+                <h4>Notwendige Cookies</h4>
+                <p>Für den Betrieb der Website erforderlich.</p>
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" checked disabled data-category="essential">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div class="cookie-category">
+            <div class="cookie-category-info">
+                <h4>Funktionale Cookies</h4>
+                <p>Videos, Kalender-Widgets und Terminbuchung.</p>
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" data-category="functional">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div class="cookie-category">
+            <div class="cookie-category-info">
+                <h4>Analyse-Cookies</h4>
+                <p>Helfen uns, die Nutzung der Website zu verstehen.</p>
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" data-category="analytics">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div class="cookie-category">
+            <div class="cookie-category-info">
+                <h4>Marketing-Cookies</h4>
+                <p>Affiliate-Tracking und personalisierte Inhalte.</p>
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" data-category="marketing">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem;">
+            <button class="btn btn-primary" id="cookieSaveSettings" style="flex: 1;">Auswahl speichern</button>
+            <button class="btn btn-secondary" id="cookieAcceptAllSettings" style="flex: 1;">Alle akzeptieren</button>
+        </div>
+    </div>
+</div>
+
+<!-- ═══ TESTCALL MODAL (global) ═══ -->
+<div class="modal-overlay" id="testcallModal">
+    <div class="modal-content" style="text-align: center;">
+        <button class="modal-close" aria-label="Schließen">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-slate); margin-bottom: 0.75rem;">Jetzt anrufen</p>
+        <h3 style="margin-bottom: 0.5rem;">Erlebe die KI live</h3>
+        <p style="font-size: 0.9rem; color: var(--color-slate); margin-bottom: 1.5rem;">Ruf uns an &ndash; in 60 Sekunden sprichst du mit dem KI-Telefonagenten.</p>
+        <div class="phone-cta">
+            <a href="tel:+494074302560" class="phone-number-display">
+                <div class="phone-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="phone-number-text">
+                    <span class="phone-label">Testnummer anrufen</span>
+                    <span class="phone-digits">040 – 7430 2560</span>
+                </div>
+            </a>
+            <span class="phone-hint">Kostenlos &bull; Keine Anmeldung &bull; Made in Hamburg</span>
+        </div>
+    </div>
+</div>
+
+<!-- Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Core JS -->
+<script src="/assets/js/main.js?v=20260331"></script>
+<script src="/assets/js/cookie-consent.js?v=20260331"></script>
+<script src="/assets/js/tracking.js?v=20260331"></script>
+
+<!-- Page-specific JS loaded by individual pages -->
+</body>
+</html>
