@@ -1,0 +1,209 @@
+{
+  "Arztpraxen": {
+    "slug": "arztpraxen",
+    "images": [
+      "arztpraxen-1.jpg",
+      "arztpraxen-2.jpg",
+      "arztpraxen-3.jpg",
+      "arztpraxen-4.jpg"
+    ]
+  },
+  "Banken": {
+    "slug": "banken",
+    "images": [
+      "banken-1.jpg",
+      "banken-2.jpg",
+      "banken-3.jpg",
+      "banken-4.jpg"
+    ]
+  },
+  "Baufinanzierer": {
+    "slug": "baufinanzierer",
+    "images": [
+      "baufinanzierer-1.jpg",
+      "baufinanzierer-2.jpg",
+      "baufinanzierer-3.jpg",
+      "baufinanzierer-4.jpg"
+    ]
+  },
+  "Bauträger": {
+    "slug": "bautrager",
+    "images": [
+      "bautrager-1.jpg",
+      "bautrager-2.jpg",
+      "bautrager-3.jpg",
+      "bautrager-4.jpg"
+    ]
+  },
+  "Dachdecker": {
+    "slug": "dachdecker",
+    "images": [
+      "dachdecker-1.jpg",
+      "dachdecker-2.jpg",
+      "dachdecker-3.jpg",
+      "dachdecker-4.jpg"
+    ]
+  },
+  "Elektriker": {
+    "slug": "elektriker",
+    "images": [
+      "elektriker-1.jpg",
+      "elektriker-2.jpg",
+      "elektriker-3.jpg",
+      "elektriker-4.jpg"
+    ]
+  },
+  "Finanzberater": {
+    "slug": "finanzberater",
+    "images": [
+      "finanzberater-1.jpg",
+      "finanzberater-2.jpg",
+      "finanzberater-3.jpg",
+      "finanzberater-4.jpg"
+    ]
+  },
+  "Gebäudereinigung": {
+    "slug": "gebaudereinigung",
+    "images": [
+      "gebaudereinigung-1.jpg",
+      "gebaudereinigung-2.jpg",
+      "gebaudereinigung-3.jpg",
+      "gebaudereinigung-4.jpg"
+    ]
+  },
+  "Gesundheitsdienstleister": {
+    "slug": "gesundheitsdienstleister",
+    "images": [
+      "gesundheitsdienstleister-1.jpg",
+      "gesundheitsdienstleister-2.jpg",
+      "gesundheitsdienstleister-3.jpg",
+      "gesundheitsdienstleister-4.jpg"
+    ]
+  },
+  "Hausverwaltungen": {
+    "slug": "hausverwaltungen",
+    "images": [
+      "hausverwaltungen-1.jpg",
+      "hausverwaltungen-2.jpg",
+      "hausverwaltungen-3.jpg",
+      "hausverwaltungen-4.jpg"
+    ]
+  },
+  "Immobilienbüros": {
+    "slug": "immobilienburos",
+    "images": [
+      "immobilienburos-1.jpg",
+      "immobilienburos-2.jpg",
+      "immobilienburos-3.jpg",
+      "immobilienburos-4.jpg"
+    ]
+  },
+  "Immobilienmakler": {
+    "slug": "immobilienmakler",
+    "images": [
+      "immobilienmakler-1.jpg",
+      "immobilienmakler-2.jpg",
+      "immobilienmakler-3.jpg",
+      "immobilienmakler-4.jpg"
+    ]
+  },
+  "Lokale Dienstleister": {
+    "slug": "lokale-dienstleister",
+    "images": [
+      "lokale-dienstleister-1.jpg",
+      "lokale-dienstleister-2.jpg",
+      "lokale-dienstleister-3.jpg",
+      "lokale-dienstleister-4.jpg"
+    ]
+  },
+  "Maklerpools": {
+    "slug": "maklerpools",
+    "images": [
+      "maklerpools-1.jpg",
+      "maklerpools-2.jpg",
+      "maklerpools-3.jpg",
+      "maklerpools-4.jpg"
+    ]
+  },
+  "Maler": {
+    "slug": "maler",
+    "images": [
+      "maler-1.jpg",
+      "maler-2.jpg",
+      "maler-3.jpg",
+      "maler-4.jpg"
+    ]
+  },
+  "PKV-Berater": {
+    "slug": "pkv-berater",
+    "images": [
+      "pkv-berater-1.jpg",
+      "pkv-berater-2.jpg",
+      "pkv-berater-3.jpg",
+      "pkv-berater-4.jpg"
+    ]
+  },
+  "Privatkliniken": {
+    "slug": "privatkliniken",
+    "images": [
+      "privatkliniken-1.jpg",
+      "privatkliniken-2.jpg",
+      "privatkliniken-3.jpg",
+      "privatkliniken-4.jpg"
+    ]
+  },
+  "Rechtsanwälte": {
+    "slug": "rechtsanwalte",
+    "images": [
+      "rechtsanwalte-1.jpg",
+      "rechtsanwalte-2.jpg",
+      "rechtsanwalte-3.jpg",
+      "rechtsanwalte-4.jpg"
+    ]
+  },
+  "SHK (Sanitär · Heizung · Klima)": {
+    "slug": "shk",
+    "images": [
+      "shk-1.jpg",
+      "shk-2.jpg",
+      "shk-3.jpg",
+      "shk-4.jpg"
+    ]
+  },
+  "Steuerberater": {
+    "slug": "steuerberater",
+    "images": [
+      "steuerberater-1.jpg",
+      "steuerberater-2.jpg",
+      "steuerberater-3.jpg",
+      "steuerberater-4.jpg"
+    ]
+  },
+  "Therapiezentren": {
+    "slug": "therapiezentren",
+    "images": [
+      "therapiezentren-1.jpg",
+      "therapiezentren-2.jpg",
+      "therapiezentren-3.jpg",
+      "therapiezentren-4.jpg"
+    ]
+  },
+  "Versicherungsmakler": {
+    "slug": "versicherungsmakler",
+    "images": [
+      "versicherungsmakler-1.jpg",
+      "versicherungsmakler-2.jpg",
+      "versicherungsmakler-3.jpg",
+      "versicherungsmakler-4.jpg"
+    ]
+  },
+  "Wirtschaftsprüfer": {
+    "slug": "wirtschaftsprufer",
+    "images": [
+      "wirtschaftsprufer-1.jpg",
+      "wirtschaftsprufer-2.jpg",
+      "wirtschaftsprufer-3.jpg",
+      "wirtschaftsprufer-4.jpg"
+    ]
+  }
+}

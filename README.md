@@ -1,7 +1,9 @@
 # KI Telefon-Agent — Website Redesign v2
 
 Komplettes Redesign von [ki-telefon-agent.com](https://ki-telefon-agent.com) im Stil von famulor.de:
-Schwarz/Weiß-Sektionsrhythmus, Cyan-Akzent (`#48DAFA`), Glas-Karten, Scroll-Animationen, branchenneutrale Positionierung.
+Schwarz-**Gold**-Weiß-Sektionsrhythmus (Akzent `#e6c76a`), Glas-Karten, Scroll-Animationen, **branchenübergreifende** Positionierung — echte Fotos aus 23 Branchen statt KI-Renders.
+
+**Echte Mehrseiten-Navigation** (kein One-Pager): jeder Menüpunkt führt auf eine eigene Unterseite, inkl. dedizierter Seiten `so-funktionierts.html` und `branchen.html`. Branchen-Bildbibliothek unter `assets/img/branchen/` (`<slug>-1..4.jpg`, Slugs ohne Umlaute, z. B. `rechtsanwalte`, `immobilienburos`, `wirtschaftsprufer`).
 
 ## Struktur
 
