@@ -109,17 +109,24 @@
         var suffix = el.getAttribute('data-suffix') || '';
         var decimals = (String(target).split('.')[1] || '').length;
         var start = null;
+        var finalText = target.toFixed(decimals) + suffix;
+        var done = false;
+        function finish() { if (!done) { done = true; el.textContent = finalText; } }
         function tick(ts) {
+          if (done) return;
           if (!start) start = ts;
           var p = Math.min(1, (ts - start) / 1400);
           var eased = 1 - Math.pow(1 - p, 3);
           el.textContent = (target * eased).toFixed(decimals) + suffix;
-          if (p < 1) requestAnimationFrame(tick);
+          if (p < 1) requestAnimationFrame(tick); else finish();
         }
         requestAnimationFrame(tick);
+        /* Sicherheits-Fallback: falls rAF gedrosselt wird (Tab im Hintergrund),
+           steht am Ende garantiert der korrekte Zielwert – nie eine falsche Teilzahl. */
+        setTimeout(finish, 1700);
         cio.unobserve(el);
       });
-    }, { threshold: 0.6 });
+    }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
     counters.forEach(function (el) { cio.observe(el); });
   }
 

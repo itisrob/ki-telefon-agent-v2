@@ -852,3 +852,36 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; letter-spacing: -.02em; }
   .nav-cta .btn { display: none; }
   .tl-cards { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   Feinschliff-Fixes (Lesbarkeit, Layout)
+   ============================================================ */
+
+/* stat-card ist für dunkle Sektionen gebaut (weißer Text). Auf hellen
+   Sektionen Text/Karte umfärben, sonst weiß-auf-weiß. */
+.sec-light .stat-card, .sec-gray .stat-card, .sec-glow-light .stat-card {
+  background: #fff; border-color: var(--card-light-border);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, .05);
+}
+.sec-light .stat-card b, .sec-gray .stat-card b, .sec-glow-light .stat-card b { color: var(--text-light-1); }
+.sec-light .stat-card span, .sec-gray .stat-card span, .sec-glow-light .stat-card span { color: var(--text-light-2); }
+.sec-light .stat-card:hover, .sec-gray .stat-card:hover, .sec-glow-light .stat-card:hover { border-color: rgba(154, 117, 34, .4); }
+
+/* 4-spaltige Schritt-Reihe (Onboarding), damit 4 Schritte in EINE Zeile passen */
+.steps.steps-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1080px) { .steps.steps-4 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 620px) { .steps.steps-4 { grid-template-columns: 1fr; } }
+
+/* Zentriertes Karten-Raster (z. B. 5 Blöcke = 3 oben + 2 mittig) */
+.uc-grid-center { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.uc-grid-center > * { flex: 1 1 320px; max-width: 372px; }
+@media (max-width: 720px) { .uc-grid-center > * { flex-basis: 100%; max-width: 100%; } }
+
+/* Integrations-Logos farbig auf hellem Chip statt weiß-gefiltert */
+.logo-chip {
+  display: flex; align-items: center; justify-content: center;
+  background: #fff; border: 1px solid var(--card-light-border);
+  border-radius: 12px; padding: 18px 20px; min-height: 76px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+}
+.logo-chip img { max-height: 34px; max-width: 100%; width: auto; object-fit: contain; filter: none; opacity: 1; }
