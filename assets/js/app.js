@@ -190,9 +190,9 @@
     /* Tracking-IDs vom Kunden übernehmen (GA4, Meta-Pixel, MS Clarity) — bewusst erst nach Consent geladen. */
   }
 
-  /* ---------- Aktiven Nav-Link markieren ---------- */
+  /* ---------- Aktiven Nav-Link markieren (Desktop + Mobile-Menü) ---------- */
   var path = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a[href]').forEach(function (a) {
+  document.querySelectorAll('.nav-links a[href], .mobile-menu a[href], .nav-drop-menu a[href]').forEach(function (a) {
     if (a.getAttribute('href') === path) a.classList.add('active');
   });
 })();
