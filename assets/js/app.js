@@ -195,4 +195,53 @@
   document.querySelectorAll('.nav-links a[href], .mobile-menu a[href], .nav-drop-menu a[href]').forEach(function (a) {
     if (a.getAttribute('href') === path) a.classList.add('active');
   });
+
+  /* ---------- Blog: Lesefortschritt-Balken ---------- */
+  var rp = document.querySelector('.reading-progress');
+  if (rp) {
+    var onRP = function () {
+      var el = document.scrollingElement || document.documentElement;
+      var max = el.scrollHeight - el.clientHeight;
+      rp.style.width = (max > 0 ? Math.min(100, (el.scrollTop / max) * 100) : 0) + '%';
+    };
+    window.addEventListener('scroll', onRP, { passive: true });
+    onRP();
+  }
+
+  /* ---------- Blog: Inhaltsverzeichnis Scrollspy + Smooth-Scroll ---------- */
+  var tocLinks = document.querySelectorAll('.toc a[href^="#"]');
+  if (tocLinks.length) {
+    tocLinks.forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var t = document.getElementById(a.getAttribute('href').slice(1));
+        if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + (document.scrollingElement || document.documentElement).scrollTop - 80, behavior: 'smooth' }); }
+      });
+    });
+    var heads = [].map.call(tocLinks, function (a) { return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
+    if ('IntersectionObserver' in window && heads.length) {
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            tocLinks.forEach(function (l) { l.classList.toggle('active', l.getAttribute('href') === '#' + en.target.id); });
+          }
+        });
+      }, { rootMargin: '-80px 0px -70% 0px' });
+      heads.forEach(function (h) { spy.observe(h); });
+    }
+  }
+
+  /* ---------- Blog: Kategorie-Filter ---------- */
+  document.querySelectorAll('.blog-filter').forEach(function (bar) {
+    var btns = bar.querySelectorAll('.filter-btn');
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        btns.forEach(function (x) { x.classList.remove('on'); });
+        b.classList.add('on');
+        var cat = b.getAttribute('data-cat');
+        document.querySelectorAll('.blog-grid .blog-card').forEach(function (card) {
+          card.classList.toggle('hide', cat !== 'alle' && card.getAttribute('data-cat') !== cat);
+        });
+      });
+    });
+  });
 })();
