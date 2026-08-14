@@ -1013,3 +1013,47 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; letter-spacing: -.02em; }
   .blog-card--featured { display: grid; grid-template-columns: 1.1fr 1fr; align-items: stretch; }
   .blog-card--featured img { height: 100%; aspect-ratio: auto; }
 }
+
+/* ============================================================
+   Fixes & Kundenstimmen-Slider
+   ============================================================ */
+
+/* Zähler im <b> darf nicht von der Label-Regel (.stat-card span) verkleinert werden */
+.stat-card b span { font-size: inherit; color: inherit; font-weight: inherit; }
+
+/* Hover-Overlay der Karten darf keine Klicks abfangen (blockierte Buttons in .uc-card) */
+.uc-card::after { pointer-events: none; }
+
+/* Trust-Badges (Made in Germany / EU-DSGVO / onOffice) */
+.trust-badges { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 26px; margin: 6px 0 34px; }
+.trust-badges img { height: 46px; width: auto; object-fit: contain; }
+.trust-badges .badge-onoffice { background: #fff; border-radius: 8px; padding: 7px 12px; height: 42px; }
+.compliance-note { text-align: center; font-size: .88rem; color: var(--text-dark-3); margin-top: 30px; }
+.compliance-note b { color: var(--text-dark-2); font-weight: 600; }
+
+/* ---------- Kundenstimmen-Slider ---------- */
+.testi-slider-wrap { position: relative; }
+.testi-slider {
+  display: flex; gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 6px 2px 10px;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.testi-slider::-webkit-scrollbar { display: none; }
+.testi-slider > .testi-card { flex: 0 0 calc((100% - 44px) / 3); scroll-snap-align: start; margin: 0; }
+@media (max-width: 1000px) { .testi-slider > .testi-card { flex-basis: calc((100% - 22px) / 2); } }
+@media (max-width: 680px)  { .testi-slider > .testi-card { flex-basis: 88%; } }
+
+.slider-nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 28px; }
+.slider-btn {
+  width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
+  border: 1px solid var(--card-light-border); background: #fff; color: var(--text-light-1);
+  transition: all .2s; flex: none;
+}
+.slider-btn:hover { border-color: var(--accent-deep); color: var(--accent-deep); transform: translateY(-2px); }
+.slider-btn svg { width: 18px; height: 18px; }
+.slider-dots { display: flex; gap: 8px; align-items: center; }
+.slider-dots button {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--card-light-border);
+  transition: all .25s; padding: 0;
+}
+.slider-dots button.on { background: var(--accent-deep); width: 26px; border-radius: 999px; }

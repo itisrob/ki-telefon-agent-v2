@@ -244,4 +244,98 @@
       });
     });
   });
+
+  /* ---------- Kundenstimmen-Slider ---------- */
+  document.querySelectorAll('.testi-slider-wrap').forEach(function (wrap) {
+    var track = wrap.querySelector('.testi-slider');
+    var dotsBox = wrap.querySelector('.slider-dots');
+    var prev = wrap.querySelector('[data-slide="prev"]');
+    var next = wrap.querySelector('[data-slide="next"]');
+    if (!track) return;
+    var slides = [].slice.call(track.children);
+    if (!slides.length) return;
+
+    /* Wie viele Karten passen gleichzeitig? -> Anzahl der Seiten */
+    function perView() {
+      var w = slides[0].getBoundingClientRect().width + 22;
+      return Math.max(1, Math.round(track.clientWidth / w));
+    }
+    function pages() { return Math.max(1, slides.length - perView() + 1); }
+
+    /* Dots aufbauen (bei Resize neu) */
+    var dots = [];
+    function buildDots() {
+      if (!dotsBox) return;
+      dotsBox.innerHTML = '';
+      dots = [];
+      for (var i = 0; i < pages(); i++) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Kundenstimme ' + (i + 1));
+        (function (idx) { b.addEventListener('click', function () { go(idx); }); })(i);
+        dotsBox.appendChild(b);
+        dots.push(b);
+      }
+      syncDots();
+    }
+    function current() {
+      var w = slides[0].getBoundingClientRect().width + 22;
+      return Math.round(track.scrollLeft / w);
+    }
+    function syncDots() {
+      var c = current();
+      dots.forEach(function (d, i) { d.classList.toggle('on', i === c); });
+    }
+    /* Eigene Scroll-Animation: unabhängig von scroll-behavior/Snap-Eigenheiten des Browsers */
+    var anim = null;
+    function go(i) {
+      var w = slides[0].getBoundingClientRect().width + 22;
+      var to = Math.max(0, Math.min(i * w, track.scrollWidth - track.clientWidth));
+      var from = track.scrollLeft;
+      if (Math.abs(to - from) < 1) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { track.scrollLeft = to; syncDots(); return; }
+      if (anim) cancelAnimationFrame(anim);
+      var snap = track.style.scrollSnapType;
+      track.style.scrollSnapType = 'none';   /* Snap würde die Animation zurückziehen */
+      var start = null, dur = 420;
+      function frame(ts) {
+        if (start === null) start = ts;
+        var p = Math.min(1, (ts - start) / dur);
+        var eased = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+        track.scrollLeft = from + (to - from) * eased;
+        if (p < 1) { anim = requestAnimationFrame(frame); }
+        else { anim = null; track.style.scrollSnapType = snap; syncDots(); }
+      }
+      anim = requestAnimationFrame(frame);
+    }
+    function step(dir) {
+      var c = current() + dir;
+      if (c < 0) c = pages() - 1;
+      if (c > pages() - 1) c = 0;
+      go(c);
+    }
+
+    if (prev) prev.addEventListener('click', function () { step(-1); paused = true; });
+    if (next) next.addEventListener('click', function () { step(1); paused = true; });
+    track.addEventListener('scroll', syncDots, { passive: true });
+    window.addEventListener('resize', buildDots);
+    /* Wird die Seite in einem Hintergrund-Tab geladen, steht die Breite noch nicht fest
+       -> Dots später neu berechnen, sobald Layout/Sichtbarkeit stehen. */
+    window.addEventListener('load', buildDots);
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) buildDots(); });
+    buildDots();
+
+    /* Auto-Play – pausiert bei Hover, Touch und wenn die Sektion nicht sichtbar ist */
+    var paused = false, visible = true;
+    wrap.addEventListener('mouseenter', function () { paused = true; });
+    wrap.addEventListener('mouseleave', function () { paused = false; });
+    track.addEventListener('touchstart', function () { paused = true; }, { passive: true });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }, { threshold: 0.2 })
+        .observe(wrap);
+    }
+    setInterval(function () {
+      if (!paused && visible && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) step(1);
+    }, 5000);
+  });
 })();
