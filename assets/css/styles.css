@@ -1078,3 +1078,15 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; letter-spacing: -.02em; }
 /* Siegel-Reihe ganz oben in der Sektion: zentriert über die volle Breite */
 .trust-badges-top { justify-content: center; margin: 0 0 14px; }
 .trust-badges-top + .compliance-note { text-align: center; margin-bottom: 0; }
+
+/* Firmenlogo statt Porträt in den Kundenstimmen (B2B-Referenz) */
+.testi-who .logo-chip-sm {
+  width: 68px; height: 48px; flex: none;
+  display: grid; place-items: center;
+  background: #fff; border: 1px solid var(--card-light-border);
+  border-radius: 9px; padding: 5px 8px;
+}
+.testi-who .logo-chip-sm img {
+  max-width: 100%; max-height: 100%; width: auto; height: auto;
+  object-fit: contain; border: 0;
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "key": "zelzer",
+    "firma": "Zelzer Immobilien (Konstantin Zelzer Immobilien GmbH)",
+    "datei": "zelzer.png",
+    "quelle": "https://crm.onoffice.de/smart20/Dateien/Zelzer/smartSite20/logo/logo-zelzer-reduziert.png",
+    "website": "https://www.zelzer-immobilien.com",
+    "hinweis": "Identifiziert ueber die Kundenstimme 'Konstantin Zelzer'. Sitz Graz (Oesterreich), Piccardigasse 23b, 8055 Graz. Nicht zu verwechseln mit 'Zelzer Wohntraum Immobilien eU' (zelzer-immobilien.at)."
+  },
+  {
+    "key": "apella",
+    "firma": "Apella AG",
+    "datei": "apella.svg",
+    "quelle": "https://home.apella.de/wp-content/uploads/2026/05/apella_logo.svg",
+    "website": "https://home.apella.de",
+    "hinweis": "Maklerpool Neubrandenburg, wie gefordert. Kundenstimmen: Mario Bosse, Stev Klapschuweit."
+  },
+  {
+    "key": "grundstein",
+    "firma": "Grundstein Immobilien GmbH",
+    "datei": "grundstein.png",
+    "quelle": "https://www.grundsteinimmo.de/images/original_499021_.png",
+    "website": "https://www.grundsteinimmo.de",
+    "hinweis": "Identifiziert ueber die Kundenstimme 'Ulf Bergmann' (Gruender). Sitz Aschersleben, Lindenstrasse 10. Nicht die gleichnamigen Firmen in Garmisch-Partenkirchen oder Wuppertal."
+  },
+  {
+    "key": "walczak",
+    "firma": "WS Immobilien (Inhaberin Sandra Walczak)",
+    "datei": "walczak.svg",
+    "quelle": "https://cdn.prod.website-files.com/64490135837df1d8b67bd47a/648a00715f5f58a86b5bc9b6_ws-immobilien-logo-full-color-rgb.svg",
+    "website": "https://ws-immo.com",
+    "hinweis": "ACHTUNG Namensabweichung: Auf der Website steht die Kundenstimme unter 'Immobilien Sandra Walczak'. Die Firma heisst laut Impressum aber 'WS Immobilien' (Drei-Eichen-Weg 15, 59069 Hamm), Inhaberin Sandra Walczak. Das Logo zeigt entsprechend 'WS Immobilien'. Beschriftung ggf. angleichen."
+  },
+  {
+    "key": "oerag",
+    "firma": "OERAG Rechtsschutzversicherungs-AG",
+    "datei": "oerag.svg",
+    "quelle": "https://www.oerag.de/dam/jcr:f7e7673a-4821-4741-8e0b-993bf05d6b97/logo-oerag.svg",
+    "website": "https://www.oerag.de",
+    "hinweis": "Duesseldorf, Hansaallee 199, Sparkassen-Finanzgruppe. Kundenstimme: Freya Greiffenhagen."
+  },
+  {
+    "key": "sowo",
+    "firma": "SoWo Immobilien GmbH",
+    "datei": "sowo.png",
+    "quelle": "https://www.sowo-immo.de/logo.png",
+    "website": "https://www.sowo-immo.de",
+    "hinweis": "Identifiziert ueber die Kundenstimme 'Ortac Oezel' (Geschaeftsfuehrer). Sitz Frankfurt am Main."
+  },
+  {
+    "key": "immobilien-plus",
+    "firma": "Immobilien Plus GmbH",
+    "datei": "immobilien-plus.png",
+    "quelle": "https://crm.onoffice.de/smart20/Dateien/ImmobilienPluseK/smartSite20/logo/Logo_ImmobilienPluseK.png",
+    "website": "https://www.immoplus-hom.de",
+    "hinweis": "Sitz Homburg-Saar, Marktplatz 10. Kundenstimme auf der Website: 'Elvira Memic'; im Impressum/Team steht Inhaber 'Elvir Memic' - Vorname pruefen."
+  },
+  {
+    "key": "suchagents",
+    "firma": "SuchAgents AT GmbH",
+    "datei": "suchagents.png",
+    "quelle": "https://crm.onoffice.de/smart20/Dateien/SuchAgents/smartSite20/logo/suchagents-logo.png",
+    "website": "https://www.suchagents.at",
+    "hinweis": "Identifiziert ueber die Kundenstimme 'Alisjan' = Alisjan Loshaj (Gruender/CEO). Sitz Steyregg (Oesterreich), nicht Deutschland."
+  },
+  {
+    "key": "stadtmakler",
+    "firma": "der stadtmakler - Martin Baehringer Immobilien GmbH & Co. KG",
+    "datei": "stadtmakler.jpg",
+    "quelle": "https://www.stadtmakler.com/images/original_299397_.jpg",
+    "website": "https://www.stadtmakler.com",
+    "hinweis": "Identifiziert ueber die Kundenstimme 'Martin Baehringer' (Gruender). Sitz Wetzlar, Bergstrasse 8. Logo liegt nur als JPEG mit weissem Hintergrund vor (kein transparentes PNG/SVG auf der Seite)."
+  }
+]
