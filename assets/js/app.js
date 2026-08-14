@@ -266,6 +266,9 @@
     var dots = [];
     function buildDots() {
       if (!dotsBox) return;
+      /* Passen alle Stimmen nebeneinander, braucht es keine Navigation */
+      var nav = wrap.querySelector('.slider-nav');
+      if (nav) nav.style.display = pages() <= 1 ? 'none' : '';
       dotsBox.innerHTML = '';
       dots = [];
       for (var i = 0; i < pages(); i++) {
